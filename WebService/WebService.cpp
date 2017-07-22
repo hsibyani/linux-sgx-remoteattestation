@@ -182,7 +182,7 @@ bool WebService::getSigRL(string gid, string *sigrl) {
     Log("\tResponse status is: %d" , response_header.response_status);
     Log("\tContent-Length: %d", response_header.content_length);
 
-    if (response_header.response_status == 200) {
+    if (response_header.response_status == 200 || response_header.response_status == 201) {
         if (response_header.content_length > 0) {
             string response(ias_response_container.p_response);
             *sigrl = Base64decode(response);
