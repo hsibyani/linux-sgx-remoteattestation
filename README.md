@@ -33,3 +33,6 @@ After the installation of those dependencies, the code can be compiled with the 
 ```make```<br />
 ```cd ../Application```<br />
 ```make SGX_MODE=HW SGX_PRERELEASE=1```
+
+Might need this to work:
+```export LD_LIBRARY_PATH="/usr/lib/:/opt/intel/sgxsdk/lib64/:/opt/intel/sgxsdk/sdk_libs"```
